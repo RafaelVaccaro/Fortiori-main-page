@@ -1,37 +1,51 @@
 :root {
     --fonte-principal: 'Montserrat';
     --branco-principal: white;
-    --botao-azul: #167BF7;
+    --botao-azul: #418ee1;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; /* Garante que paddings e borders sejam incluídos nas dimensões */
 }
 
 body {
     background-color: var(--branco-principal);
     font-family: var(--fonte-principal), sans-serif;
+    max-width: none; /* Remova o max-width para permitir que o body ocupe a tela inteira */
+    width: 100%;
+    height: 100%;
 }
 
 .header {
     display: flex;
-    background-color: rgba(255, 255, 255, 0.9);
-    height: 55px;
+    align-items: center; /* Alinha verticalmente no centro */
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 55px; /* Mantém a altura fixa */
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    color: white;
-    justify-content: flex-start;
+    padding: 0 20px;
+    box-sizing: border-box;
+    justify-content: space-between; /* Garante que logo + abas fiquem juntos à esquerda e whatsapp à direita */
 }
 
+
 .abas {
-    display: flex; /* Flexbox para os itens ficarem lado a lado */
+    display: flex; /* As abas serão organizadas lado a lado */
+    margin: 0; /* Remove qualquer margem entre o logo e as abas */
     padding: 0;
-    margin-top: 1.1em;
     font: bold 16px "Montserrat", sans-serif;
     font-weight: 300;
 }
 
 .logo {
-    width: 14%;
-    padding: 16px;
+    height: 25px; /* Define uma altura fixa para o logo */
+    width: auto;  /* A largura será ajustada proporcionalmente */
 }
 
 .abas li {
@@ -56,9 +70,9 @@ body {
 }
 
 .whatsapp-button {
+    margin-left: auto; /* Alinha o botão à direita */
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    margin-left: 39em;
     display: flex;
     align-items: center;
     background-color: #25D366;
@@ -81,17 +95,33 @@ body {
 }
 
 .home {
-    margin: 5em 5em;
-    align-items: center;
+    display: grid; /* Usamos grid para dividir em duas colunas */
+    grid-template-columns: 50% 50%; /* Define duas colunas, cada uma com 50% da largura */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-items: center; /* Centraliza os itens horizontalmente dentro de cada célula */
+    width: 100vw; /* Faz com que a seção ocupe a largura completa da tela */
+    height: 60vh; /* Define a altura da seção como 60% da altura da janela */
+    padding: 6em 15em; /* Mantém o padding desejado */
+    box-sizing: border-box; /* Garante que o padding não afete a largura/altura */
+    margin: 0;
 
-    display: grid;
-    grid-template-columns: 50% 50%;
 }
+
+
+.home-content {
+    padding: 0 15px;
+    width: 600px;
+
+}
+
 
 .home-img {
-    width: 30em;
-    margin-left: 2em;
+    max-width: 600px; /* Limita a largura máxima da imagem */
+    width: 100%; /* Permite que a imagem ocupe até 100% do espaço disponível */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: contain; /* Garante que a imagem será redimensionada para caber dentro do contêiner sem ser cortada */
 }
+
 
 .home-title {
     font-weight: 500;
@@ -102,8 +132,10 @@ body {
 .home-subtitle {
     font-weight: 400;
     font-size: 15px;
-    margin-right: 6em;
+    margin-right: 0;
 }
+
+
 
 .cotacao_btn {
     background-color: var(--botao-azul);
@@ -113,5 +145,55 @@ body {
     text-decoration: none;
     display: inline-block;
 }
+
+.qs {
+    background-color: var(--botao-azul);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.qs-img {
+    max-width: 800px;
+    justify-self: center;
+    width: 100%; /* Permite que a imagem ocupe até 100% do espaço disponível */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: contain; /* Garante que a imagem será redimensionada para caber dentro do contêiner sem ser cortada */
+}
+
+.qs-title {
+    font: var(--fonte-principal);
+    font-size: 20px;
+    color: var(--branco-principal);
+}
+
+.qs-subtitle {
+    font: var(--fonte-principal);
+    font-size: 14px;
+    color: var(--branco-principal);
+}
+
+.wave {
+    background-color: var(--botao-azul);
+    width: 100vw; /* Garante que a seção ocupe 100% da largura da tela */
+    margin: 0; /* Remove qualquer margem */
+    padding: 0; /* Remove qualquer padding */
+    overflow: hidden; /* Garante que nada saia da área da seção */
+}
+
+.wave-img {
+    width: 100%; /* A imagem ocupa 100% da largura da seção */
+    height: auto; /* Ajusta a altura da imagem automaticamente para manter a proporção */
+    object-fit: cover; /* Faz com que a imagem cubra completamente a área da seção */
+    display: block; /* Remove qualquer espaço extra abaixo da imagem */
+    margin: 0; /* Remove qualquer margem */
+    padding: 0; /* Remove qualquer padding */
+}
+
 
 
