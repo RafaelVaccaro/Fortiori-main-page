@@ -32,6 +32,7 @@ body {
     padding: 0 20px;
     box-sizing: border-box;
     justify-content: space-between; /* Garante que logo + abas fiquem juntos à esquerda e whatsapp à direita */
+    z-index: 2;
 }
 
 
@@ -104,24 +105,22 @@ body {
     padding: 6em 15em; /* Mantém o padding desejado */
     box-sizing: border-box; /* Garante que o padding não afete a largura/altura */
     margin: 0;
+    gap: 2em;
 
 }
-
 
 .home-content {
     padding: 0 15px;
     width: 600px;
-
 }
-
 
 .home-img {
     max-width: 600px; /* Limita a largura máxima da imagem */
     width: 100%; /* Permite que a imagem ocupe até 100% do espaço disponível */
     height: auto; /* Mantém a proporção da imagem */
     object-fit: contain; /* Garante que a imagem será redimensionada para caber dentro do contêiner sem ser cortada */
+    z-index: 1;
 }
-
 
 .home-title {
     font-weight: 500;
@@ -134,8 +133,6 @@ body {
     font-size: 15px;
     margin-right: 0;
 }
-
-
 
 .cotacao_btn {
     background-color: var(--botao-azul);
@@ -150,12 +147,15 @@ body {
     background-color: var(--botao-azul);
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-template-rows: auto; /* Permite que a altura se ajuste conforme o conteúdo */
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 100%;
+    height: auto; /* A altura será ajustada automaticamente com base no conteúdo */
     margin: 0;
     padding: 0;
+    z-index: 0;
+    position: relative;
 }
 
 .qs-img {
@@ -164,18 +164,29 @@ body {
     width: 100%; /* Permite que a imagem ocupe até 100% do espaço disponível */
     height: auto; /* Mantém a proporção da imagem */
     object-fit: contain; /* Garante que a imagem será redimensionada para caber dentro do contêiner sem ser cortada */
+    align-self: center;
+}
+
+.qs-content {
+    align-self: center;
+    justify-self: center;
+    margin-right: 9em;
+    color: var(--branco-principal);
 }
 
 .qs-title {
     font: var(--fonte-principal);
     font-size: 20px;
-    color: var(--branco-principal);
+    align-self: center;
+    justify-self: center;
+    text-align: center;
 }
 
-.qs-subtitle {
+.qs-span {
     font: var(--fonte-principal);
     font-size: 14px;
-    color: var(--branco-principal);
+    font-weight: 400;
+
 }
 
 .wave {
@@ -184,6 +195,9 @@ body {
     margin: 0; /* Remove qualquer margem */
     padding: 0; /* Remove qualquer padding */
     overflow: hidden; /* Garante que nada saia da área da seção */
+    height: 150px;
+    z-index: 1;
+
 }
 
 .wave-img {
@@ -193,7 +207,47 @@ body {
     display: block; /* Remove qualquer espaço extra abaixo da imagem */
     margin: 0; /* Remove qualquer margem */
     padding: 0; /* Remove qualquer padding */
+    z-index: 1;
 }
 
+.wave-bottom {
+    background-color: var(--botao-azul);
+    width: 100vw; /* Garante que a seção ocupe 100% da largura da tela */
+    margin: 0; /* Remove qualquer margem */
+    padding: 0; /* Remove qualquer padding */
+    overflow: hidden; /* Garante que nada saia da área da seção */
+    height: 125px;
+    z-index: 0;
+}
 
+.qs-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    font: var(--fonte-principal);
+}
+
+.contato-content {
+    border: 1px solid #ece6e6;
+    border-radius: 10px;
+    width: 900px;
+    height: 500px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra mais suave na parte inferior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato-title {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--botao-azul);
+}
 
