@@ -2,6 +2,8 @@
     --fonte-principal: 'Montserrat';
     --branco-principal: white;
     --botao-azul: #418ee1;
+    --cinzaClaro-forms: #eae9e9;
+    --cinzaEscuro-forms: #5e5e5e;
 }
 
 html, body {
@@ -246,7 +248,7 @@ body {
     border-radius: 10px;
     width: 950px;
     height: 480px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     padding: 0 15px 32px;
     display: flex;
     flex-direction: column;
@@ -269,6 +271,9 @@ body {
     width: 888px;
     height: 446px;
     padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Centraliza horizontalmente */
 }
 
 .contato-content-btn {
@@ -277,6 +282,91 @@ body {
     padding: 0 15px;
 }
 
+.faleConosco {
+    width: 100%;
+    height: 107px;
+    padding: 0 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.faleConosco-nome-telefone {
+    width: 888px;
+    height: 157px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 -15px 10px;
+}
+
+.fc-title {
+    margin: 5px 0 50px;
+    padding: 20px 0 2px;
+    font-size: 20px;
+    color: var(--botao-azul);
+}
+
+.nome-telefone {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 100%;
+}
+
+.nome {
+    margin:  0 0 10px;
+    padding: 0 15px;
+}
+
+.nome-input {
+    padding: 8px;
+    height: 28px;
+    width: 486px;
+    border: none;
+    background-color: var(--cinzaClaro-forms);
+    border-radius: 12px;
+    color: var(--botao-azul);
+    font: var(--fonte-principal);
+}
+
+.nome-input::placeholder {
+    color: var(--cinzaEscuro-forms);
+}
+
+.telefone {
+    margin:  0 0 10px;
+    padding: 0 15px;
+}
+
+.telefone-input {
+    padding: 8px;
+    height: 28px;
+    width: 326px;
+    border: none;
+    background-color: var(--cinzaClaro-forms);
+    border-radius: 12px;
+    color: var(--cinzaEscuro-forms);
+    font: var(--fonte-principal);
+}
+
+.email {
+    width: 888px;
+    height: 157px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 -15px 10px;
+}
+
+.email-input {
+    padding: 8px;
+    height: 28px;
+    width: 486px;
+    border: none;
+    background-color: var(--cinzaClaro-forms);
+    border-radius: 12px;
+    color: var(--botao-azul);
+    font: var(--fonte-principal);
+}
 
 
 
