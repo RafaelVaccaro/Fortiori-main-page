@@ -11,7 +11,7 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    box-sizing: border-box; /* Garante que paddings e borders sejam incluídos nas dimensões */
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
@@ -24,42 +24,42 @@ body {
 
 .header {
     display: flex;
-    align-items: center; /* Alinha verticalmente no centro */
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.7);
-    height: 55px; /* Mantém a altura fixa */
+    height: 55px;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     padding: 0 20px;
     box-sizing: border-box;
-    justify-content: space-between; /* Garante que logo + abas fiquem juntos à esquerda e whatsapp à direita */
+    justify-content: space-between;
     z-index: 2;
 }
 
 
 .abas {
-    display: flex; /* As abas serão organizadas lado a lado */
-    margin: 0; /* Remove qualquer margem entre o logo e as abas */
+    display: flex;
+    margin: 0;
     padding: 0;
     font: bold 16px "Montserrat", sans-serif;
     font-weight: 300;
 }
 
 .logo {
-    height: 25px; /* Define uma altura fixa para o logo */
-    width: auto;  /* A largura será ajustada proporcionalmente */
+    height: 25px;
+    width: auto;
 }
 
 .abas li {
-    display: inline-block; /* Faz os itens da lista ficarem na mesma linha */
-    margin-right: 0.5em; /* Espaçamento entre os itens */
+    display: inline-block;
+    margin-right: 0.5em;
 }
 
 .abas li:not(:last-child)::after {
-    content: " | "; /* Adiciona o separador entre os itens */
-    color: black; /* Define a cor do separador para preto */
-    padding-left: 0.2em; /* Adiciona o espaço à esquerda do separador */
+    content: " | ";
+    color: black;
+    padding-left: 0.2em;
     padding-right: 0.1em;
 }
 
@@ -73,7 +73,7 @@ body {
 }
 
 .whatsapp-button {
-    margin-left: auto; /* Alinha o botão à direita */
+    margin-left: auto;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     display: flex;
@@ -98,14 +98,14 @@ body {
 }
 
 .home {
-    display: grid; /* Usamos grid para dividir em duas colunas */
-    grid-template-columns: 50% 50%; /* Define duas colunas, cada uma com 50% da largura */
-    align-items: center; /* Alinha os itens verticalmente no centro */
-    justify-items: center; /* Centraliza os itens horizontalmente dentro de cada célula */
-    width: 100vw; /* Faz com que a seção ocupe a largura completa da tela */
-    height: 60vh; /* Define a altura da seção como 60% da altura da janela */
-    padding: 6em 15em; /* Mantém o padding desejado */
-    box-sizing: border-box; /* Garante que o padding não afete a largura/altura */
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-items: center;
+    width: 100vw;
+    height: 60vh;
+    padding: 6em 15em;
+    box-sizing: border-box;
     margin: 0;
     gap: 2em;
 
@@ -123,10 +123,10 @@ body {
 }
 
 .home-img {
-    max-width: 600px; /* Limita a largura máxima da imagem */
-    width: 100%; /* Permite que a imagem ocupe até 100% do espaço disponível */
-    height: auto; /* Mantém a proporção da imagem */
-    object-fit: contain; /* Garante que a imagem será redimensionada para caber dentro do contêiner sem ser cortada */
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
     z-index: 1;
     margin-left: 1em;
 }
@@ -156,11 +156,11 @@ body {
     background-color: var(--botao-azul);
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto; /* Permite que a altura se ajuste conforme o conteúdo */
+    grid-template-rows: auto;
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: auto; /* A altura será ajustada automaticamente com base no conteúdo */
+    height: auto;
     margin: 0;
     padding: 0;
     z-index: 0;
@@ -170,9 +170,9 @@ body {
 .qs-img {
     max-width: 800px;
     justify-self: center;
-    width: 100%; /* Permite que a imagem ocupe até 100% do espaço disponível */
-    height: auto; /* Mantém a proporção da imagem */
-    object-fit: contain; /* Garante que a imagem será redimensionada para caber dentro do contêiner sem ser cortada */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
     align-self: center;
 }
 
@@ -200,31 +200,31 @@ body {
 
 .wave {
     background-color: var(--botao-azul);
-    width: 100vw; /* Garante que a seção ocupe 100% da largura da tela */
-    margin: 0; /* Remove qualquer margem */
-    padding: 0; /* Remove qualquer padding */
-    overflow: hidden; /* Garante que nada saia da área da seção */
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     height: 150px;
     z-index: 1;
 
 }
 
 .wave-img {
-    width: 100%; /* A imagem ocupa 100% da largura da seção */
-    height: auto; /* Ajusta a altura da imagem automaticamente para manter a proporção */
-    object-fit: cover; /* Faz com que a imagem cubra completamente a área da seção */
-    display: block; /* Remove qualquer espaço extra abaixo da imagem */
-    margin: 0; /* Remove qualquer margem */
-    padding: 0; /* Remove qualquer padding */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
     z-index: 1;
 }
 
 .wave-bottom {
     background-color: var(--botao-azul);
-    width: 100vw; /* Garante que a seção ocupe 100% da largura da tela */
-    margin: 0; /* Remove qualquer margem */
-    padding: 0; /* Remove qualquer padding */
-    overflow: hidden; /* Garante que nada saia da área da seção */
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     height: 125px;
     z-index: 0;
 }
@@ -239,8 +239,8 @@ body {
 .contato {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;     /* Centraliza verticalmente */
+    justify-content: center;
+    align-items: center;
     font: var(--fonte-principal);
 }
 
@@ -253,8 +253,8 @@ body {
     padding: 0 15px 32px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;     /* Centraliza verticalmente */
+    justify-content: center;
+    align-items: center;
 }
 
 .contato-content-1 {
@@ -263,9 +263,7 @@ body {
     padding: 0 15px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Centraliza horizontalmente */
-
-
+    justify-content: flex-start;
 }
 
 .contato-content-2 {
@@ -274,7 +272,7 @@ body {
     padding: 0 15px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Centraliza horizontalmente */
+    justify-content: flex-start;
 }
 
 .contato-content-btn {
@@ -420,8 +418,8 @@ body {
     padding: 0 15px 32px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;     /* Centraliza verticalmente */
+    justify-content: center;
+    align-items: center;
 }
 
 .whatsapp-button-2 {
@@ -508,20 +506,20 @@ body {
 
 .sistemas-logos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
-    grid-template-rows: repeat(3, auto);  /* Três linhas */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
 }
 
 .grid-item {
-    display: flex;            /* Usa flexbox para centralizar o conteúdo */
-    justify-content: center;  /* Centraliza horizontalmente */
-    align-items: center;      /* Centraliza verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .grid-item img {
     width: 50%;
-    object-fit: contain; /* Faz a imagem manter suas proporções */
+    object-fit: contain;
 }
 
 .footer-bottom {
