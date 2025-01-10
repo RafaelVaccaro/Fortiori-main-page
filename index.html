@@ -15,16 +15,16 @@
     <header class="header">
         <img src="img/logo-fortioriit.png" alt="logo" class="logo">
         <ul class="abas">
-            <li><a href="#" class="links">Home</a></li>
-            <li><a href="#" class="links">Quem somos</a></li>
-            <li><a href="#" class="links">Contato</a></li>
+            <li><a href="#home" class="links">Home</a></li>
+            <li><a href="#wavet" class="links">Quem somos</a></li>
+            <li><a href="#waveb" class="links">Contato</a></li>
         </ul>
         <button class="whatsapp-button">
             <i class="fab fa-whatsapp"></i> WhatsApp
         </button>
     </header>
 
-    <section class="home">
+    <section class="home" id="home">
         <div class="home-content">
             <h1 class="home-title">Aplicativos e Sistemas<br>Personalizados</h1>
             <h2 class="home-subtitle">Softwares para Coworkings, Clínicas e Profissionais da Saúde.<br>O pioneiro para gestão de coworkings com agendamento.</h2>
@@ -33,11 +33,11 @@
         <img src="img/home.png" alt="Celular e computador da Fortiori IT" class="home-img">
     </section>
 
-    <section class="wave">
+    <section class="wave" id="wavet">
         <img src="img/wave_top.png" alt="Wave Top" class="wave-img">
     </section>
 
-    <section class="qs">
+    <section class="qs" id="qs">
         <img src="img/qs.png" alt="Quem Somos" class="qs-img">
         <div class="qs-content">
             <ul class="qs-list">
@@ -56,11 +56,11 @@
         </div>
     </section>
 
-    <section class="wave-bottom">
+    <section class="wave-bottom" id="waveb">
         <img src="img/wave_bottom2.png" alt="Wave Top" class="wave-img">
     </section>
 
-    <section class="contato">
+    <section class="contato" id="contato">
         <div class="contato-content-0">
             <div class="contato-content-1">
                 <div class="contato-content-2">
@@ -86,13 +86,80 @@
                             <input class="email-input" placeholder="Email">
                         </label>
                     </div>
+                    <div class="assunto">
+                        <label>
+                            <select class="assunto-select">
+                                <option value="" disabled selected>Assunto</option>
+                                <option value="opcao1">Sistemas</option>
+                                <option value="opcao2">Dúvidas</option>
+                                <option value="opcao3">Sugestões</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="mensagem">
+                        <label>
+                            <textarea class="mensagem-textarea" placeholder="Mensagem"></textarea>
+                        </label>
+                    </div>
                 </div>
             </div>
             <div class="contato-content-btn">
-
+                <a href="#" class="contato-btn">Enviar mensagem</a>
             </div>
         </div>
+        <div class="whatsapp-contato">
+            <p class="whatsapp-text">Atendemos também pelo</p>
+            <button class="whatsapp-button-2">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </button>
+        </div>
     </section>
-    inp
+
+    <section class="footer-top">
+        <div class="footer-top-content">
+            <div class="endereco">
+                <div class="endereco-title">
+                    <h3 class="endereco-txt">Endereço</h3>
+                    <hr class="hr-line">
+                </div>
+                <p class="logradouro"> Rua Dona Laura, 471 - Rio Branco, Porto Alegre - RS, 90430-091 </p>
+                <a href="https://www.google.com/maps/place/Forttiori+IT/@-30.0282923,-51.2045254,16z/data=!4m6!3m5!1s0x951979953b9fdae3:0xac58212060e59367!8m2!3d-30.0296186!4d-51.2008574!16s%2Fg%2F11g8yl7jw8?entry=ttu&g_ep=EgoyMDI1MDEwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="mapa">
+                    <img src="img/mapaofc.png" class="mapa-img" alt="Mapa Fortiori">
+                </a>
+            </div>
+            
+            <div class="sistemas">
+                <div class="sistemas-title">
+                    <h3 class="sistemas-txt">Sistemas A Fortiori IT</h3>
+                    <hr class="hr-line">
+                </div>
+                <div class="sistemas-logos">
+                    <div class="grid-item">
+                        <img src="img/argo.png" alt="Imagem 1">
+                    </div>
+                    <div class="grid-item">
+                        <img src="img/logo-panvel-pb.png" alt="Imagem 2">
+                    </div>
+                    <div class="grid-item">
+                        <img src="img/grupopanvel.png" alt="Imagem 3">
+                    </div>
+                    <div class="grid-item">
+                        <img src="img/artedesign.png" alt="Imagem 4">
+                    </div>
+                    <div class="grid-item">
+                        <img src="img/killing.png" alt="Imagem 5">
+                    </div>
+                    <div class="grid-item">
+                        <img src="img/logo-cerealiza-pb.png" alt="Imagem 6">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="footer-bottom">
+            <p class="footer-bottom-txt">© 2025 Copyright: Fortiori It</p>
+    </section>
 </body>
 </html>
