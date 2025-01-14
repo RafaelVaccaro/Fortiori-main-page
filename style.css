@@ -13,6 +13,8 @@ html, body {
     height: 100%;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+
 }
 
 body {
@@ -150,6 +152,12 @@ body {
     color: var(--branco-principal);
     text-decoration: none;
     display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s
+}
+
+.cotacao_btn:hover {
+    background-color: #81a1f3;
 }
 
 .qs {
@@ -405,10 +413,19 @@ body {
 
 .contato-btn {
     background-color: var(--botao-azul);
-    border-radius: 100px;
-    padding: 0.6em 0.8em;
+    border-radius: 20px;
+    padding: 0.6em 1em;
     color: var(--branco-principal);
     text-decoration: none;
+    border: none;
+    font-size: 14px;
+    font: var(--fonte-principal);
+    cursor: pointer;
+    transition: background-color 0.3s
+}
+
+.contato-btn:hover {
+    background-color: #81a1f3;
 }
 
 .whatsapp-contato {
